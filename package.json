@@ -1,0 +1,13 @@
+{
+  "name": "@kma-nodejs-backend/course-task-01",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tron",
+  "license": "UNLICENSED",
+  "dependencies": {}
+}

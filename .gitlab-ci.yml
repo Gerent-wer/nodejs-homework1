@@ -1,0 +1,17 @@
+default:
+  image: registry.gitlab.com/kma-nodejs-backend/tasks-test-suite:latest
+  # This folder is cached between builds
+  # https://docs.gitlab.com/ee/ci/yaml/index.html#cache
+  cache:
+    paths:
+      - node_modules/
+  before_script:
+    - npm ci
+    - pm2 start ./index.js
+    - apt install net-tools
+    - netstat -anp
+
+test-task-01:
+  stage: test
+  script:
+    - node /apps/test-suite/tasks/task-01.js
